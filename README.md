@@ -16,3 +16,5 @@ yes, just look for the GDReader file how it is commented, and look at the genera
 
 ## Can I see it working?
 yes, Open the Control.tscn and click at the panel node, click update, press f6 and you're done.
+
+![Alt Text](https://i.imgur.com/F752MUC.gif)

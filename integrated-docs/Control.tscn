@@ -1,0 +1,303 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://addons/integrated_docs/scr/RSTManager.gd" type="Script" id=1]
+[ext_resource path="res://addons/integrated_docs/fonts/Ubuntu-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://addons/integrated_docs/fonts/Ubuntu-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://addons/integrated_docs/fonts/Ubuntu-Light.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://addons/integrated_docs/fonts/Ubuntu-Italic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://addons/integrated_docs/fonts/UbuntuMono-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.988235, 0.988235, 0.988235, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.0341797
+anchor_top = 0.045
+anchor_right = 0.956055
+anchor_bottom = 0.953333
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="RT" type="RichTextLabel" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 2
+custom_fonts/mono_font = SubResource( 2 )
+custom_fonts/bold_italics_font = SubResource( 3 )
+custom_fonts/italics_font = SubResource( 4 )
+custom_fonts/bold_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_constants/table_vseparation = 5
+custom_constants/table_hseparation = 50
+custom_constants/line_separation = 0
+bbcode_enabled = true
+bbcode_text = "[b][i]Description[/i][/b]
+
+ Large Description Example (must have)
+
+[b][i]Properties[/i][/b]
+
+[table=3][cell][color=purple][url='']Variant[/url][/color][/cell][cell][color=purple][url='']custom_var[/url][/color][/cell][cell][color=red]Null[/color][/cell][cell][color=purple][url='']Variant[/url][/color][/cell][cell][color=purple][url='']done[/url][/color][/cell][cell][color=red]Null[/color][/cell][cell][color=purple][url='']Variant[/url][/color][/cell][cell][color=purple][url='']okk[/url][/color][/cell][cell][color=red]Null[/color][/cell][/table]
+
+
+[b][i]Methods[/i][/b]
+
+[table=2][cell]void[/cell][cell][color=purple][url='']custom_method[/url][/color][b]([/b]REF_ARGS[b])[/b][/cell][cell]void[/cell][cell][color=purple][url='']test_method[/url][/color][b]([/b]REF_ARGS[b])[/b][/cell][cell]void[/cell][cell][color=purple][url='']other_mathod[/url][/color][b]([/b]REF_ARGS[b])[/b][/cell][/table]
+
+
+[b][i]Property Descriptions[/i][/b]
+
+
+
+- [color=purple][url='']Variant[/url][/color] [b]custom_var[/b]
+
+[table=2][cell]*Default*[/cell][cell][color=red]Null[/color][/cell][/table]
+
+ Property description (must have)
+[b][i][/i][/b]
+
+
+
+- [color=purple][url='']Variant[/url][/color] [b]done[/b]
+
+[table=2][cell]*Default*[/cell][cell][color=red]Null[/color][/cell][/table]
+
+ this is done
+[b][i][/i][/b]
+
+
+
+- [color=purple][url='']Variant[/url][/color] [b]okk[/b]
+
+[table=2][cell]*Default*[/cell][cell][color=red]Null[/color][/cell][/table]
+
+
+[b][i][/i][/b]
+
+
+
+Method Descriptions[b][i][/i][/b]---------------
+
+
+
+- void [b]custom_method[/b] [b]([/b] _TODO2_ [b])[/b]
+
+DESC[b][i][/i][/b]
+
+
+
+- void [b]test_method[/b] [b]([/b] _TODO2_ [b])[/b]
+
+DESC[b][i][/i][/b]
+
+
+
+- void [b]other_mathod[/b] [b]([/b] _TODO2_ [b])[/b]
+
+DESC[b][i][/i][/b]
+
+
+
+"
+meta_underlined = false
+text = "Description
+
+ Large Description Example (must have)
+
+Properties
+
+Variantcustom_varNullVariantdoneNullVariantokkNull
+
+
+Methods
+
+voidcustom_method(REF_ARGS)voidtest_method(REF_ARGS)voidother_mathod(REF_ARGS)
+
+
+Property Descriptions
+
+
+
+- Variant custom_var
+
+*Default*Null
+
+ Property description (must have)
+
+
+
+
+- Variant done
+
+*Default*Null
+
+ this is done
+
+
+
+
+- Variant okk
+
+*Default*Null
+
+
+
+
+
+
+Method Descriptions---------------
+
+
+
+- void custom_method ( _TODO2_ )
+
+DESC
+
+
+
+- void test_method ( _TODO2_ )
+
+DESC
+
+
+
+- void other_mathod ( _TODO2_ )
+
+DESC
+
+
+
+"
+scroll_following = true
+selection_enabled = true
+override_selected_font_color = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = -290.672
+margin_top = -141.962
+margin_right = -24.6717
+margin_bottom = -11.9618
+text = ".. _class_GDReader:
+
+GDReader
+====
+
+ Short description example (must have)
+
+Description
+-----------
+
+ Large Description Example (must have)
+
+Properties
+----------
+
+| :ref:`Variant<class_Variant>` | :ref:`custom_var<class_GDReader_property_custom_var>` | ``Null`` |
+| :ref:`Variant<class_Variant>` | :ref:`done<class_GDReader_property_done>` | ``Null`` |
+| :ref:`Variant<class_Variant>` | :ref:`okk<class_GDReader_property_okk>` | ``Null`` |
+
+
+Methods
+-------
+
+| void | :ref:`custom_method<class_GDReader_method_custom_method>` **(** REF_ARGS **)** |
+| void | :ref:`test_method<class_GDReader_method_test_method>` **(** REF_ARGS **)** |
+| void | :ref:`other_mathod<class_GDReader_method_other_mathod>` **(** REF_ARGS **)** |
+
+
+Property Descriptions
+---------------------
+
+.. _class_GDReader_property_custom_var:
+
+- :ref:`Variant<class_Variant>` **custom_var**
+
+| *Default* | ``Null`` |
+
+ Property description (must have)
+
+----
+
+.. _class_GDReader_property_done:
+
+- :ref:`Variant<class_Variant>` **done**
+
+| *Default* | ``Null`` |
+
+ this is done
+
+----
+
+.. _class_GDReader_property_okk:
+
+- :ref:`Variant<class_Variant>` **okk**
+
+| *Default* | ``Null`` |
+
+
+
+----
+
+
+
+Method Descriptions
+-------------------
+
+.. _class_GDReader_method_custom_method:
+
+- void **custom_method** **(** _TODO2_ **)**
+
+DESC
+----
+
+.. _class_GDReader_method_test_method:
+
+- void **test_method** **(** _TODO2_ **)**
+
+DESC
+----
+
+.. _class_GDReader_method_other_mathod:
+
+- void **other_mathod** **(** _TODO2_ **)**
+
+DESC
+----
+
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}

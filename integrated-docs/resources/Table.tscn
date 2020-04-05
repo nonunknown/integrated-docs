@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/integrated_docs/scr/Table.gd" type="Script" id=1]
+[ext_resource path="res://addons/integrated_docs/resources/RT.tscn" type="PackedScene" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.752941, 0.752941, 0.752941, 1 )
+
+[node name="Table" type="Panel" groups=[
+"IDOC_TABLE",
+]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -550.0
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grid" type="GridContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 150.0
+custom_constants/vseparation = 2
+custom_constants/hseparation = 2
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cell" type="Panel" parent="Grid"]
+visible = false
+margin_right = 512.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="RT" parent="Grid/Cell" instance=ExtResource( 2 )]
+margin_right = 0.0
+margin_bottom = 0.0
+rect_clip_content = false
+size_flags_horizontal = 3
+bbcode_text = "[center]ASD[/center]"
+text = "ASD"

@@ -1,3 +1,6 @@
+# THIS CLASS IS RESPONSIBLE:
+# FOR RENDERING RST FILES INSIDE A RICHTEXTLABEL
+# BASICALLY IS : RST->BBCODE
 tool
 extends Panel
 
@@ -34,7 +37,7 @@ func change_text():
 	for i in range(7):
 		result.remove(0)
 	
-	var current_table:Table = null
+#	var current_table:Table = null
 	var current_rt:RichTextLabel = null
 	var content = $RT
 	
@@ -139,7 +142,7 @@ func check_ref(string:String):
 		var r = rm.strings
 		print(r)
 		
-		var changed = "[color=purple][url='']"+r[2]+"[/url][/color]"
+		var changed = "[color=blue][url='']"+r[2]+"[/url][/color]"
 		string = string.replace(r[0], changed )
 	return string
 

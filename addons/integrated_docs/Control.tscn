@@ -33,6 +33,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="DeleteMe" type="Label" parent="."]
+margin_left = 42.6353
+margin_top = -122.76
+margin_right = 82.6353
+margin_bottom = -108.76
+text = "<- This box on left, any text inside it, when you click at PANEL's Update button
+will be rendered down bellow.
+
+Example: If you have generate your custom doc which will be located at 
+/generated_docs/ copy the content to this TextEdit, click Panel's update and it will render
+down bellow, Press F6 and see the results."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.0341797
 anchor_top = 0.045
@@ -128,7 +143,6 @@ DESC[b][i][/i][/b]
 
 
 "
-meta_underlined = false
 text = "Description
 
  Large Description Example (must have)

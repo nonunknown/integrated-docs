@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "GDReader",
+"language": "GDScript",
+"path": "res://addons/integrated_docs/scr/GDReader.gd"
+}, {
+"base": "Reference",
+"class": "GDtoRST",
+"language": "GDScript",
+"path": "res://addons/integrated_docs/scr/GDtoRST.gd"
+} ]
+_global_script_class_icons={
+"GDReader": "",
+"GDtoRST": ""
+}
+
+[application]
+
+config/name="Docs"
+config/icon="res://icon.png"
+
+[debug]
+
+settings/gdscript/max_call_stack=2048
+settings/max_remote_stdout_chars_per_second=1000000000
+max_remote_stdout_chars_per_second=2147483647
+
+[editor_plugins]
+
+enabled=PoolStringArray( "QuickPluginManager", "integrated_docs" )
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

@@ -1,3 +1,6 @@
+# This class is only a exmaple of 
+# how documented gdfiles should be
+
 class_name GDReader # (must have)
 
 # sd: Short description example (must have)
@@ -30,7 +33,7 @@ func test_method():
 # Description (must have)
 # data:TYPE Some data to manage (optional)
 # Return TYPE (must have)
-func other_mathod() -> int:
+func other_method() -> int:
 	return 0
 
 # "must have" is needed, not placing this will result in not genereting documentation for this script

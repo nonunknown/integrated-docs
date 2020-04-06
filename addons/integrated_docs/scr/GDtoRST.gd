@@ -1,3 +1,6 @@
+# THIS CLASS IS RESPONSIBLE FOR GETTING A GD FILE
+# AND GENERATE A RST BASED ON IT, CALLED FROM MAIN.GD
+
 class_name GDtoRST
 
 const _search_doc = "(#.*\\s)+func.*:" #find source code comments

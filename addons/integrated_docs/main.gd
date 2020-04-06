@@ -20,13 +20,13 @@ func _exit_tree():
 func _input(event):
 	if event is InputEventKey:
 		if event.is_pressed() and event.scancode == KEY_F8:
+			# this is a WIP feature to read online docs and
+			#render inside the engine
 			call_website()
 		elif event.is_pressed() and event.scancode == KEY_F10:
-#			gd_reader.test()
-#			print(gd_reader.get_script().get_script_method_list())
+
 			var gd_to_rst = GDtoRST.new()
 			var gd_reader = GDReader.new()
-#			print(str(gd_reader.custom_var))
 			gd_to_rst.read_source(gd_reader.get_script().source_code)
 
 func call_website():
